@@ -1,0 +1,1827 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* General Styles */
+ 
+html {
+  font-size: 16px;
+	scroll-behavior: smooth;
+}
+ 
+body {
+	background-color: #d2d2dc;
+  font-size: 1em;
+ /* color: #e2e3ed;*/
+  text-align: left;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  overflow-x:hidden;	
+	/*prevents white space from the right side*/
+}
+
+ul, 
+ol {
+	
+  list-style-type: none;
+}
+
+a {
+ /* color: #e2e3ed;*/
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  color: black;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1.875em;
+}
+ 
+h3, 
+h4 {
+  font-weight: 500;
+  font-size: 1.125em;
+  margin: 20px 0;
+	/*This is for the contact title for the footer*/
+}
+
+h4 {
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+}
+
+img {
+ width: 100%;
+}
+ 
+figure {
+ margin: 0;
+}
+
+address {
+ font-style: normal;
+}
+
+.skill-1 {
+	font-weight: 400;
+}
+
+
+/* -------------------- Base Header - Footer Styles -------------------- */
+
+header,
+footer {
+  align-items: center;
+  background-color: black;	
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+header {
+  padding: 15px 0; /*makes the height of the header longer*/
+}
+
+header .content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;	
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+	color: black;
+  flex-flow: row wrap;
+  font-size: 1.125em;
+  font-weight: 700;
+  justify-content: space-around;
+	/*margin: 0 27px;*/
+  text-transform: uppercase;
+  width: 100%; /*Made the links have space.*/	
+}
+/*
+header nav ul {
+  display: flex;
+  background: black;
+  justify-content: center;
+ margin-top: -80px;
+  padding: 30px;
+  width: 100%;		
+}*/
+
+header nav ul li {
+  font-size: 1.125em;
+}
+
+li a {
+	color: white;
+}
+nav {
+	background-color: transparent;
+										
+	margin-top: -34rem;
+	position: fixed;
+	z-index: 100; /* had to use this so that the links were in front as the user scrolls down*/
+}
+
+.social, .social-icons i:hover,
+.social, .social-icons i:active {
+    transform:scale(1.9);	
+}
+
+footer {
+  flex-direction: column;
+  margin-top: 8rem;
+  text-align: center;	
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .content-wrapper {
+  margin: 50px 0;	
+  width: 55%;
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .social-icons p {
+  align-items: center;
+  border: 1px solid #FF6500;
+  border-radius: 200px;	
+  color: darkorange;	
+  display: flex;
+  height: 40px;	
+  justify-content: center;	
+  width: 40px;				/*margin-right: 2em;*/
+}
+
+footer .social-icons p i {
+  font-size: 1.3125em;
+}
+
+footer .copyright {
+  color: white;
+  margin: 20px 0;
+}
+
+header li a:hover,
+header li:active {
+	background: rgba(0, 0, 0, 0.6);
+  /*  background-color: #527158;*/
+	color: greenyellow;
+	padding: 1.2rem;
+}
+
+.contact, .contact-container i:hover,
+.contact, .contact-container i:active {
+    transform:scale(1.3);	
+}
+
+.contact, .Graphics_email i:hover,
+.contact, .Graphics_email i:active {
+    transform:scale(1.3);	
+}
+
+				/* -------------------- Mobile Styles - Homepage -------------------- */ 
+
+
+nav li{
+		display: none;
+	/* put nav link that is for desktop as none so that the regular nav wont show in mobile. Hamburger should only appear*/
+	
+}
+
+#menu-bar {
+	background-color: black;
+	height: 7rem;
+	margin-left: -1rem;
+	padding-bottom: 1.3rem;
+	width: 107%;
+}	
+	
+#nav {
+	padding-left: 14rem;
+	padding-bottom: 2rem;
+}	
+	
+ #nav li {
+	 font-size: 1.8rem;
+	margin-right: -55rem;
+	 padding-top: 4rem;
+}
+
+
+		
+header {
+	background-image:url("../css/img/web_developer_2.png");
+	min-height: 65rem;
+	background-position: center;
+	
+	/*background-image: url("img/profile.png");*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	
+	
+	
+	 width: 100%;
+
+  object-fit: contain;
+  object-position: bottom;
+}
+
+
+.hero-area {
+	background-repeat: no-repeat;
+	background-position: center;	
+	background-size: cover;
+	/*padding-top: 58px;* I had a white space b/w the nav and picture. so I had this, but now with the min-height it makes the picture show its entirty and closes the white gap*/
+
+  	display: flex;
+  	flex-flow: row wrap;
+	justify-content: center;
+	min-height: 1.2rem;
+}
+
+.content-wrapper {
+	display: flex;
+  	flex-flow: row wrap;
+	justify-content: center;
+}
+
+ h1 {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 3em;
+	text-align: center;
+	margin-left: 2rem;
+	margin-top: 9rem;
+}
+
+ h2 {
+	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Great Vibes', cursive;*/
+	/*font-family: 'Pinyon Script', cursive;*/
+	/*font-family: 'Sacramento', cursive;*/
+	/* margin-left: 2rem;
+	margin-top: -5rem;	 */
+}
+
+p {
+	color: black;
+	font-family: 'Jura', sans-serif;
+	padding: 0 34px 0 34px;
+	text-align: justify;
+}
+
+.hero-area_wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+h1 {
+	color: white;
+	font-size: 1.5em;
+	margin-top: -40rem;
+	margin-right: 20rem;
+}
+
+ #name {
+	color: mediumpurple;
+	 font-family: 'Abril Fatface', cursive;
+	font-size: 2.4em;
+	margin-left: 2rem;
+	margin-top: -2rem;	
+}
+
+.hero-area_wrapper h3 {
+	color: white;
+	font-size: 1.3rem;
+	padding-bottom: 41rem;
+	margin-left: 2rem;
+}
+
+
+.social .social-icons {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+}
+
+.social-icons {
+	/*color: white;*/
+	margin-top: -10rem;
+	padding-left: 3.9rem;
+}
+
+.social .social-icons i {
+	color: lawngreen;
+	font-size: 1.2em;
+	padding-bottom: -3rem;
+	padding-left: 2rem;
+	padding-right: 1rem;
+}
+
+
+/*-------END OF HOMEPAGE IMAGE------*/
+
+
+.biography {
+	display: flex;
+	flex-flow: row wrap;	
+}
+
+.biography_wrapper {
+	margin-top: -17rem;
+	position: relative;
+	left: -4rem;
+}
+
+.biography_wrapper h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	margin-left: 1rem;
+	padding-bottom: 1rem;
+	padding-top: 10rem;
+	text-align: center;
+}
+
+.description p {
+	margin-top: -2rem;
+	word-wrap: break-word;
+	width: 76%;
+}
+
+.biography_wrapper img {
+	justify-content: center;
+	padding-bottom: 2rem;
+	padding-left: 3rem;
+	padding-top: 2rem;
+	width: 55%;
+}
+
+/*-------END OF BIOGRAPHY W/ IMAGE------*/
+
+.motto_1 .overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 220px;
+	width: 100%;
+}
+
+
+/*-------END OF QUOTE SECTION DIVIDER------*/
+
+
+.resume-container {
+	margin-top: 4rem;
+	padding-right: 4.6rem;
+}
+
+
+
+.parallax {
+	background: url("../css/img/3.jpg") no-repeat;
+	/*background: url('img/earrings.png') no-repeat; /*temporary picture*/
+	background-attachment: fixed;
+	background-size: cover;
+	height: 220px;
+}
+
+.motto_1 p {
+	font-size: 0.89em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	/*this will be in white color*/
+	margin-top: 54px;
+	text-align: center;
+}
+
+.motto_1 h4 {
+	font-size: 0.74em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	text-align: right;
+	padding-right: 45px;
+}
+
+.motto_1 .overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 222px;
+	width: 100%;
+}
+
+
+/*-------END OF OVERLAY------*/
+
+
+
+
+.motto_2 .overlay_2 {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 275px;
+	width: 100%;
+}
+
+.parallax_2 {
+	background: url("./css/img/1.PNG") no-repeat; 
+	background-attachment: fixed;
+	background-size: cover;
+	height: 17.2rem;
+	margin-top: 6rem; 
+	padding-bottom: -3rem;
+}
+
+.motto_2 p {
+	color: white;
+	font-size: 0.89em;
+	font-family: 'Syncopate', sans-serif;
+	/*this will be in white color*/
+	margin-top: 54px;
+	text-align: center;
+}
+
+.motto_2 h4 {
+	color: white;
+	font-size: 0.74em;
+	font-family: 'Syncopate', sans-serif;
+	padding-right: 45px;
+	text-align: right;
+}
+
+
+/*-------END OF WORK EXPERIENCE------*/
+
+
+.portfolio h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	margin-top: 4rem;
+	padding-left: 10rem;
+}
+
+.portfolio p, center{
+	color: dimgrey;
+	font-family: 'Sacramento', cursive;
+	text-align: center;
+	margin-bottom: -1.7rem;
+	padding-left: 2rem;
+}
+
+
+
+/*-------END OF PORTFOLIO------*/
+
+
+.contact {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contact-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contact h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	margin-top: 3rem;
+	padding-bottom: 2rem;
+	padding-left: 4rem;
+	padding-right: 12rem;
+	text-align:center;
+}
+
+.contact-container {
+	margin-left: 6rem;
+	margin-top: 5rem;
+}
+
+.contact-container article  i {
+	color: black;
+	font-size: 3em;
+	padding-left: 7rem;
+	padding-top: 2rem;
+	width: 55px;
+}
+
+.contact-container h4 {
+	padding-left: 5rem;
+}
+
+.contact-container a {
+	font-family: 'Nova Mono', monospace;
+}
+
+.Graphics_email article i {
+	color: mediumpurple;
+	font-size: 3em;
+	padding-left: 13rem;
+	padding-top: 2rem;
+	width: 55px;
+}
+	
+.Graphics_email h4 {
+	padding-left: 7rem;
+	padding-top: 0.1rem;
+}
+
+.Graphics_mail h4 {
+	color: dimgrey;
+	/*font-family: 'Koho', sans-serif;*/
+	font-style:italic;
+	margin-left: 6.5rem;
+	margin-top: 6.1rem;
+	padding-left: 1rem;
+	padding-bottom: -4rem;
+	text-align: center;
+}
+
+.Graphics_email a {
+	color: black;
+	font-family: 'Nova Mono', monospace;
+	font-size: 1.1em;
+	line-height: 0.2rem;
+	margin-left: 6.5rem;
+	margin-top: -1rem;
+	padding-bottom: -4rem;
+	text-align: center;
+}
+
+
+/*END OF CONTACT SECTION*/
+
+
+footer {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.copyright {
+	color: black;
+	font-size: 1.3rem;
+}
+
+
+
+
+@media only screen and (min-width:768px) {
+	
+#menu-bar {
+	background-color: black;
+	height: 7rem;
+	margin-left: -2rem;
+	padding-bottom: 1.3rem;
+	width: 107%;
+}	
+	
+#nav {
+	padding-left: 24rem;
+	padding-bottom: 5.2rem;
+}	
+	
+ #nav li {
+	 font-size: 1.8rem;
+	padding-right: -53rem;
+	 padding-top: 4rem;
+}
+		
+
+.hero-area {
+	background-size: cover;
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+	
+.hero-area_wrapper {
+	margin-right: 13rem;
+	padding-top: 4rem;
+	
+}
+
+ h1 {
+	color: white;
+	font-size: 2em;
+	margin-top: -44rem;
+	margin-left: 7rem;
+}
+
+#name {
+	color: mediumpurple;
+	font-size: 3.5em;
+	margin-left: 6.4rem;
+	margin-top: 0.rem;
+}
+
+.hero-area h3 {
+	color: white;
+	font-size: 1.5rem;
+	margin-top: -3.6rem;
+	margin-left: 2rem;
+	padding-left: 4.3rem;
+}
+	
+.hero-area_wrapper, .social, .social-icons {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -24rem;
+	margin-left: 7rem;
+}	
+	
+ .social-icons i {
+	color: white;
+	font-size: 2rem;
+    margin-left: 1rem;
+	width: 92%;
+}
+
+	
+/*-------END OF HOMEPAGE IMAGE------*/
+
+
+.biography {
+	display: flex;
+	flex-flow: row wrap;	
+	justify-content: center;
+}
+
+.biography_wrapper h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	font-size: 2.3rem;
+	margin-left: 1.7rem;
+	padding-bottom: 1rem;
+	padding-top: 10rem;
+	text-align: center;
+}
+
+.biography_wrapper {
+	margin-left: 4rem;	
+	margin-right: 4rem;	
+}
+	
+.biography_wrapper img {
+	padding-top: 7rem;
+}
+	
+.description {
+	margin-top: -1rem;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	padding-bottom: 5rem;
+}
+
+.description p {
+	font-size: 1.4rem
+	/*margin-left: 4rem;	
+	margin-right: 4rem;*/
+}	
+
+.biography_wrapper img {
+	justify-content: center;
+	padding-left: 13rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	width: 45%;
+}
+
+/*-------END OF BIOGRAPHY W/ IMAGE------*/
+
+	
+.motto_1 .overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	font-size: 1.4em;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 220px;
+	width: 100%;
+}
+
+/*-------END OF QUOTE SECTION DIVIDER------*/
+
+
+
+
+/*-------END OF RESUME------*/
+	
+	
+	
+	
+
+.parallax {
+	background: url("../css/img/3.jpg") no-repeat;
+	/*background: url('img/earrings.png') no-repeat; /*temporary picture*/
+	background-attachment: fixed;
+	background-size: cover;
+	height: 220px;
+}
+
+.motto_1 p {
+	font-size: 0.89em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	/*this will be in white color*/
+	margin-top: 54px;
+	text-align: center;
+}
+	
+.motto_1 h4 {
+	font-size: 0.74em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	padding-right: 45px;
+	text-align: right;
+}
+
+.motto_1 .overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 222px;
+	width: 100%;
+}
+
+	
+/*-------END OF OVERLAY------*/
+	
+
+.motto_2 .overlay_2 {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 275px;
+	width: 100%;	
+}
+	
+.parallax_2 {
+	background: url("../css/img/1.PNG") no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 17.2rem;
+	margin-top: 6rem; 
+	padding-bottom: -3rem;
+}
+
+.motto_2 p {
+	color: white;
+	font-size: 1.2em;;
+	font-family: 'Syncopate', sans-serif;
+	/*this will be in white color*/
+
+	margin-top: 42px;
+	padding-left: -1rem;
+	text-align: center;
+	word-wrap: break-word;
+	width: 35em;
+}
+	
+.motto_2 h4 {
+	color: white;
+	font-size: 1em;
+	font-family: 'Syncopate', sans-serif;
+	padding-right: 45px;
+	text-align: right;
+}
+
+
+/*-------END OF OVERLAY_2------*/
+
+
+.portfolio {
+	/*display: flex;*/
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}	
+	
+.portfolio h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	font-size: 2.3rem;
+	margin-top: 7rem;
+	padding-left: 15rem;
+	text-align: center;
+}	
+
+
+.portfolio p, center{
+	color: dimgrey;
+	font-family: 'Sacramento', cursive;
+	font-size: 1.2rem;
+	margin-top: -4rem;
+	padding-right: -4rem;
+	padding-left: 12.6rem;
+}	
+		
+	
+
+.hint center{
+	font-family: 'Great Vibes', cursive;
+	margin-bottom: -34rem;
+	padding-left: -54rem;
+	/*font-family: 'Pinyon Script', cursive;*/
+	/*font-family: 'Sacramento', cursive;*/
+}	
+	
+.wrapper {
+  /*add display:flex and set justify-content to space-between*/
+	
+  display: flex;
+  margin: 0 1rem;
+  justify-content: space-around;
+  padding: 10px 0;
+
+}
+
+.div-1, .div-2 {
+  border: 1px solid #ddd;
+  box-shadow: -5px 2px 15px 0 #ddd;
+  font-size: 1.6em;
+  text-align: center;
+  padding-bottom: 10px;
+  width: 48%;
+  color: black;
+}
+	
+h5 {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-block-start: 1.6rem;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+	
+.div-1 img {
+	height: auto;
+	width: 90%;	
+}	
+	
+.div-1 img {
+	height: auto;
+	width: 90%;	
+	min-height: 380px;
+}
+	
+	
+
+/*-------END OF PORTFOLIO------*/
+
+
+.contact {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contact-container {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.contact h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	margin-top: 3rem;
+	padding-bottom: 2rem;
+	padding-left: 11rem;
+	padding-right: 12rem;
+	text-align:center;
+}
+
+.contact-container {
+	margin-left: 7rem;
+	margin-top: 5rem;
+}
+
+.contact-container article  i {
+	color: black;
+	font-size: 3em;
+	margin-right: -6rem;
+	padding-top: 2rem;
+	width: 55px;
+}
+
+.contact-container h4 {
+	color: dimgrey;
+	padding-left: 3rem;
+	margin-bottom: -2rem;
+}
+
+.contact-container a {
+	font-family: 'Nova Mono', monospace;
+	padding-right: 3rem;
+	
+}
+
+.Graphics_email article i {
+	color: mediumpurple;
+	font-size: 3em;
+	padding-left: 13rem;
+	width: 55px;
+}
+	
+.Graphics_email h4 {
+	font-size: 1.0rem;
+	padding-left: 8rem;
+	margin-top: 4rem;
+	margin-bottom: -2rem;
+	word-wrap: break-word;
+	width: 35%;
+}
+
+.Graphics_email h4 {
+	color: dimgrey;
+	/*font-family: 'Koho', sans-serif;*/
+	font-style:italic;
+	margin-left: 1rem;
+}
+
+.Graphics_email a {
+	color: black;
+	/*font-family: 'Koho', sans-serif;*/
+	font-family: 'Nova Mono', monospace;
+	font-size: 1.1em;
+	margin-left: 7rem;
+	padding-bottom: -2rem;
+}
+	
+.Graphics_email i {
+	padding-right: -1rem;
+	padding-bottom: -2rem;
+}	
+
+
+/*End of Contact section*/	
+	
+	
+footer {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.copyright {
+	color: black;
+	font-size: 1.9rem;
+}
+}
+
+
+
+
+@media only screen and (min-width:1200px){
+
+	
+#menu-bar{
+	display: none;
+	/* put hamburger nav link that is for mobile and tablet as none so that it wont show in  desktop nav*/
+	z-index: 999;
+}
+	
+header, span {
+	font-size: 26px;
+	padding-left: 1px;
+}
+
+header nav {
+	/*float: right;*/
+	padding: 46px 10px;
+}
+
+header nav ul {
+  display: flex;
+  background: black;
+  justify-content: center;
+ margin-top: -25rem;
+  padding: 30px;
+  width: 100%;		
+}
+
+header nav ul li {
+	/* font-family: 'Cormorant SC', serif; */	
+    font-family: 'Domine', serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	padding: 15px 18px;
+	display: inline;
+}	
+	
+
+nav ul li a:hover {
+	color: rebeccapurple;
+	transition: .9s;
+}
+	
+nav ul li a:after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: 50% 50%;
+	background-color: rgba(255, 255, 255, 0.9);		
+}
+	
+	
+.hero-area_wrapper {
+	margin-right: 34rem;
+	margin-top: -20rem;
+}
+	
+h1 {
+	color: white;
+	font-size: 2.4em;
+	margin-top: -24rem;
+	margin-left: 10rem;
+}
+
+ #name {
+	color: mediumpurple;
+	font-family: 'Abril Fatface', cursive;
+	font-size: 4em;
+	margin-left: 10rem;
+	margin-top: -2rem;
+	word-wrap: break-word;
+	width: 95%;
+}
+
+.hero-area_wrapper h3 {
+	color: white;
+	font-size: 1.5rem;
+	margin-top: -2.3rem;
+	margin-left:2rem;
+	padding-left: 9rem;
+}
+
+.social .social-icons {
+	display: flex;
+	/*flex-direction: column;*/
+	/*flex-flow: column wrap;*/
+	justify-content: flex-end;
+	margin-right: -19rem;
+	margin-top: -34rem;
+}
+
+.social-icons {
+	color: white;
+}
+
+.social, .social-icons i {
+	color: white;
+	font-size: 1.4em;
+	margin-right: 0.1rem;
+	padding-bottom: 3rem;
+	padding-left: 1.2rem;
+	padding-right: 1rem;
+	
+	
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow, transform;
+	transition-property: box-shadow, transform;
+}
+
+
+/*-------END OF HOMEPAGE IMAGE------*/
+
+	
+.hero-area {
+	background-size: cover;
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	height: auto;
+}	
+
+.social {
+	margin-left: 2rem;
+}
+	
+.social-icons i {
+	color: color;
+	font-size: 1.2em;
+	margin-left: 4rem;
+	margin-top: 23rem;
+    padding-right: 4rem;
+	width: 45%;
+
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow, transform;
+	transition-property: box-shadow, transform;
+}	
+	
+.biography article {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+	
+.biography h2{
+	width: 85%;
+}	
+	
+.biography article figure,
+.biography article div {
+	width: 25%;
+}
+	
+.biography_wrapper h2 {
+	position: relative;
+	left: 11rem;
+	text-align: center;	
+	font-size: 2rem;
+}	 
+	
+.biography_wrapper img {
+	width: 129%;	
+	margin-top: 10rem;
+	/*margin-left: 4rem;*/
+	position: relative;
+	left: -4rem;
+}
+	
+.description {
+	margin-right: 23rem;
+	margin-top: 7rem;
+}
+	
+.description p {
+	font-size: 1.2rem;
+	/*margin-top: 66px;*/
+	padding-left: 4rem;
+	word-wrap: break-word;
+	width: 206%;	
+}
+
+	
+/*-------END OF BIOGRAPHY W/ IMAGE------*/
+	
+
+.parallax {
+	background: url("../css/img/3.jpg") no-repeat;
+	/*background: url('img/earrings.png') no-repeat; /*temporary picture*/
+	background-attachment: fixed;
+	background-size: cover;
+	height: 220px;
+}
+
+.motto_1 p {
+	font-size: 0.89em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	/*this will be in white color*/
+	margin-left: 10rem;
+	text-align: center;
+	word-wrap: break-word;
+	width: 62%;
+}
+	
+.motto_1 h4 {
+	font-size: 0.74em;
+	font-family: 'Syncopate', sans-serif;
+	color: white;
+	padding-right: 18rem;
+	text-align: right;
+}
+
+.motto_1 .overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 222px;
+	width: 100%;
+}
+
+.skills_title {
+	position: relative;
+	left: 45rem;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	font-size: 2.5rem;
+}
+
+.skill-1, .div-2 {
+	/* border: 1px solid #ddd; */
+	/* box-shadow: -5px 2px 15px 0 #ddd; */
+	color: black;
+	font-size: 1.1em;	
+	/* justify-content: space-around; made space vertical */
+	padding-bottom: 10px;
+	text-align: center;
+	width: 48%;
+	gap: 7rem;
+  }
+	  
+  .skill-1 {
+	position: relative;
+	width: 400px;
+  }
+	
+.motto_2 .overlay_2 {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 275px;
+	width: 100%;
+}
+
+.parallax_2 {
+	background: url("../css/img/1.PNG") no-repeat; 
+	background-attachment: fixed;
+	background-size: cover;
+	height: 17.2rem;
+	margin-top: 6rem; 
+	padding-bottom: -3rem;
+}
+
+.motto_2 p {
+	color: white;
+	font-size: 0.89em;
+	font-family: 'Syncopate', sans-serif;
+	/*this will be in white color*/
+	margin-top: 54px;
+	text-align: center;
+}
+
+.motto_2 h4 {
+	color: white;
+	font-size: 0.74em;
+	font-family: 'Syncopate', sans-serif;
+	padding-right: 45px;
+	text-align: right;
+}	
+	
+	
+.motto_2 .overlay_2 {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-size: 100px;
+	position: absolute;
+	/*top: 43;
+	left: 0;*/
+	height: 275px;
+	width: 100%;
+}
+
+.parallax_2 {
+	background: url("../css/img/1.PNG") no-repeat;
+	max-height: 32rem;
+	/*background: url("img/profile_2.png") no-repeat; /*temporary picture*/
+	background-attachment: fixed;
+	background-size: cover;
+	/*height: 17.2rem;*/
+	margin-top: 6rem; 
+	padding-bottom: -3rem;
+}
+
+.motto_2 p {
+	color: white;
+	font-size: 1.2em;
+	font-family: 'Syncopate', sans-serif;
+	/*this will be in white color*/
+	margin-top: 54px;
+	text-align: center;
+	padding-left: 14rem;
+	word-wrap: break-word;
+	width: 66%;
+	
+}
+
+.motto_2 h4 {
+	color: white;
+	font-size: 0.74em;
+	font-family: 'Syncopate', sans-serif;
+	padding-right: 15rem;
+	text-align: right;
+}
+	
+
+/**End of Motto**/	
+	
+	
+.wrapper {
+  /*add display:flex and set justify-content to space-between*/
+	
+  display: flex;
+  margin: 0 1rem;
+  padding: 10px 0;
+}
+	
+.portfolio h2 {
+	margin-right: 10rem;	
+	padding-bottom: 3rem;
+}	
+
+.portfolio p, center{
+	color: dimgrey;
+	font-family: 'Sacramento', cursive;
+	text-align: center;
+	margin-bottom: 0.2rem;
+	padding-right: 5rem;
+	padding-top: -2rem;
+	padding-bottom: 2rem;
+}	
+	
+	
+.div-1, .div-2 {
+  border: 1px solid #ddd;
+  box-shadow: -5px 2px 15px 0 #ddd;
+  color: black;
+  font-size: 1.6em;	
+  justify-content: space-around; /* made space vertical*/
+  padding-bottom: 10px;
+  text-align: center;
+  width: 48%;
+}
+	
+.div-1 {
+  position: relative;
+  width: 400px;
+}
+	
+#festive image {
+  display: block;
+  width: 100%;
+}	
+	
+.image__overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;	
+  justify-content: center;
+  opacity: 0;	
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;	
+}
+	
+.image__overlay:hover{
+  opacity: 1;
+}
+
+.image__title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+	
+.image__description_3 {
+  font-size: 0.01em;
+  margin-top: 0.25em;
+  padding-bottom: -24rem;	
+  text-align: center;
+}
+	
+.image__description_4 {
+  font-size: 0.01em;
+  margin-top: 0.25em;
+  text-align: center;
+}
+	
+.hover-text {
+  color: white;
+}
+	 
+.div-1 img {
+	height: auto;
+	width: 95%;	
+}	
+	
+.div-1 img{
+	height: auto;
+	width: 90%;	
+	min-height: 80px; /**380*/
+}
+	
+	
+/*End of portfolio section*/	
+	
+	
+.contact {
+	display: flex;
+	flex-direction: column;
+	margin-left: 8rem;
+	padding-bottom: 5rem;
+	margin-top: 4rem;
+}
+
+.contact h2 {
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	margin-top: 3rem;
+	padding-bottom: 2rem;
+	padding-left: 11rem;
+	padding-right: 12rem;
+	text-align:center;
+}
+
+.contact-container {
+	margin-left: 7rem;
+	margin-top: 5rem;
+}
+
+.contact-container  i {
+	color: black;
+	font-size: 3em;
+	margin-right: -6rem;
+	width: 55px;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow, transform;
+	transition-property: box-shadow, transform;
+}
+
+.contact-container h4 {
+	color: dimgrey;
+	padding-left: 3rem;
+	margin-bottom: -2rem;
+}
+
+.contact-container a {
+	font-family: 'Nova Mono', monospace;
+	font-size: 0.9rem;
+	padding-right: 3rem;
+	
+}
+
+.Graphics_email article i {
+	color: mediumpurple;
+	font-size: 3em;
+	padding-left: 13rem;
+	width: 55px;
+}
+	
+.Graphics_email h4 {
+	padding-left: 6rem;
+	margin-top: 4rem;
+	margin-bottom: -2rem;
+}
+
+.Graphics_email h4 {
+	color: dimgrey;
+	font-size: 1rem;
+	/*font-family: 'Koho', sans-serif;*/
+	/*font-style:italic;*/
+	margin-left: 1rem;
+}
+
+.Graphics_email a {
+	color: black;
+	/*font-family: 'Koho', sans-serif;*/
+	font-family: 'Nova Mono', monospace;
+	font-size: 0.9em;
+	margin-left: 7rem;
+	padding-bottom: -2rem;
+}
+	
+.Graphics_email i {
+	padding-right: -3rem;
+	padding-bottom: -2rem;
+	
+	
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow, transform;
+	transition-property: box-shadow, transform;
+}	
+
+
+/*End of Contact section*/	
+		
+
+.copyright {
+	font-size: 1.7rem;
+}	
+	
+	
+	
+/*	
+@media only screen and (min-width:1200px){	*/
+
+		
+	
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/*@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+/*}*/
+
+
+
+
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+}
